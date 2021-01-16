@@ -1,6 +1,4 @@
-### FieldAssist
-
-# VCS (Git) v2.0
+# VCS (Git) Branching Model
 
 #### Created: 15 Jan 21
 #### Updated: 16 Jan 21
