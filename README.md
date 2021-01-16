@@ -1,4 +1,4 @@
-﻿![](VCS%20v2.0%20Proposal%20001%20(2).001.png)
+﻿![](img/001.png)
 FieldAssist
 
 **VCS (Git) v2.0**
@@ -43,7 +43,7 @@ Drilling down and after brainstorming we came with our new Git Branching model w
 1. Linear history would enable us to cherry pick commits easily.
 1. With proper commit message/branch naming  standards we can easily identify the purpose of commit and subsequent PR
 
-**OVERVIEW OF NEW SYSTEM![](VCS%20v2.0%20Proposal%20001%20(2).002.png)**
+**OVERVIEW OF NEW SYSTEM![](img/002.png)**
 
 The new branching model is an enhanced version of [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/) that tries to solve the previous diagnosed issues by defining different branches as below:
 
@@ -174,7 +174,7 @@ Pull request can be merged by admins in three ways (actually there are four, but
 
 Hence all team members will use **Rebase and merge** option when merging PR of individual members into their respective team develop branch.
 
-![](VCS%20v2.0%20Proposal%20001%20(2).007.png)
+![](img/007.png)
 
 **BEST PRACTICES** 
 
@@ -197,7 +197,7 @@ If we religiously follow the above pattern we would have a pretty organized stru
 
 Looks awesome?
 
-![](VCS%20v2.0%20Proposal%20001%20(2).009.png)
+![](img/009.png)
 
 **Commit Message**
 
@@ -205,7 +205,7 @@ Proper commit message should be entered while committing your work. Your commit 
 
 1. Commit message should have a prefix indicating the feature/highlight of the nature of work in commit. For example:
 
-![](VCS%20v2.0%20Proposal%20001%20(2).010.png)
+![](img/010.png)
 
 This will clearly indicate what commit message corresponds to what feature/bug in commit history. Helpful after merge and releases are complete.
 
@@ -247,7 +247,7 @@ Every merge to either **develop** or **master** must have the latest commit as *
 
 **Rebasing** is a process to reapply commits on top of another base trip. This must be done regularly or just before raising PR to the base branch.
 
-![](VCS%20v2.0%20Proposal%20001%20(2).012.png)
+![](img/012.png)
 
 In the above figure, the feature branch is no more with latest changes in master because some other members did work on master. Hence to have linear git history and prevent merge conflicts feature branch is **rebased on-to master** so as to make its commit appear **on top of the latest master.**
 
@@ -259,7 +259,7 @@ $ git rebase master          // The branch on which you will raise PR
 
 **ff (Fast forward) merge vs no-ff  merge**
 
-![](VCS%20v2.0%20Proposal%20001%20(2).014.png)
+![](img/014.png)
 
 Feature branches can be merged in two ways. Either by **ff-merge** or by **--no-ff merge.** No ff merge would create **merge commit** while maintaining the history of merge. This is helpful when merging **hotfix branches** where merge history is required.
 
@@ -269,7 +269,7 @@ On the other hand, **ff merge** would simply merge the feature branch on-to mast
 
 Sometimes code related or code review type discussions are needed with other members, hence often we add a prefix **WIP** to the title of PR. Such PR should not be merged as the work is still in progress. Once the WIP thing is over, the author of PR must remove the WIP prefix to get it reviewed & merged.
 
-![](VCS%20v2.0%20Proposal%20001%20(2).015.png)
+![](img/015.png)
 
 **FURTHER READING**
 
