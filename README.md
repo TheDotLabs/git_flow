@@ -222,6 +222,7 @@ This will clearly indicate what commit message corresponds to what feature/bug i
 Every merge to either **develop** or **master** must have the latest commit as **Release Commit.** This release commit comprises of two changes only:
 
 **1. Version Bump:** Increase in build version eg v2.5.4 to v2.5.5 or v2.6.0 in accordance with [semantic versioning](https://travishorn.com/semantic-versioning-with-git-tags-1ef2d4aeede6).
+
 **2. Change log:** Updating corresponding CHANGELOG.md with what happened after the last commit message.
 
 ```
