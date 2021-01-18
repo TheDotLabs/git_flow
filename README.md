@@ -1,10 +1,10 @@
-# VCS (Git) Branching Model
+﻿# VCS (Git) Branching Model
 
-#### Created: 15 Jan 21
-#### Updated: 16 Jan 21
+Created: 15 Jan 21  
+Updated: 16 Jan 21  
 
-#### Author: Ayush P Gupta [@apgapg](https://github.com/apgapg)
-#### Edited: --
+Author: Ayush P Gupta [@apgapg](https://github.com/apgapg)  
+Edited: --  
 
 
 ## OVERVIEW
@@ -202,7 +202,7 @@ Looks awesome?
 
 ![](img/009.png)
 
-###Commit Message
+### Commit Message
 
 Proper commit message should be entered while committing your work. Your commit message should follow following standards:
 
@@ -261,7 +261,7 @@ $ git checkout experiment    // your local branch
 $ git rebase master          // The branch on which you will raise PR
 ```
 
-**ff (Fast forward) merge vs no-ff  merge**
+### ff (Fast forward) merge vs no-ff  merge
 
 ![](img/014.png)
 
@@ -269,7 +269,7 @@ Feature branches can be merged in two ways. Either by **ff-merge** or by **--no-
 
 On the other hand, **ff merge** would simply merge the feature branch on-to master branch (provided feature is at latest with master). This is helpful when we require linear history and are not interested how it got merged.
 
-**WIP tag in PR (Work in progress. Do not review)**
+### WIP tag in PR (Work in progress. Do not review)
 
 Sometimes code related or code review type discussions are needed with other members, hence often we add a prefix **WIP** to the title of PR. Such PR should not be merged as the work is still in progress. Once the WIP thing is over, the author of PR must remove the WIP prefix to get it reviewed & merged.
 
