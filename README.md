@@ -133,13 +133,13 @@ develop-team-A
 
 ### Scenario-3 : Start of sprint BB
 
-We know the above release process may take a little time and meanwhile the next sprint can start. Hence in order to start the new sprint work, again the team lead will take out a new branch from develop:
+We know the above release process may take a little time and meanwhile the next sprint can start. Hence in order to start the new sprint work, again the team lead will take out a new branch from develop and thereafter team members can start working with their respective branches:
 
 ```
-develop
+develop-team-A 
 
-    -- dev/team-A/sprint-BB 
-    -- dev/team-B/sprint-BB
+    -- sprint-BB/team-A/bug/fix-null-in-report 
+    -- sprint-BB/team-A/feature/beat-o-meter
 ```
 
 And the process will continue, without hampering the previous sprint branches anywhere.
@@ -172,11 +172,15 @@ Pull request can be merged by admins in three ways (actually there are four, but
 
 **no-ff merge** is used while merging hotfix branches so as to preserve merge history.
 
-**Rebase and merge** is the most general way to merge PR into develop branches. This preserves linear history and prevents any merge commits while accepting PRs.
+**Rebase and merge** is the another general way to merge PR into develop branches. This preserves linear history and prevents any merge commits while accepting PRs.
 
-Hence all team members will use **Rebase and merge** option when merging PR of individual members into their respective team develop branch.
+Hence we recommend to use **Rebase and merge** option when merging PR of individual members into their respective team develop branch.
 
-![](img/007.png)
+**Note:** There is another way known as **Squash and merge** which is a little advanced concept but highly recommended way to have a meaningful commit history. Squash is helpful to merge less meaningful commits into one. Generally used when merging a feature, bug pull request. Again, if you know what you are doing, this is the **best option** to go with.
+
+![](img/007.png) 
+
+![](img/016.png)
 
 ## BEST PRACTICES
 
@@ -184,7 +188,7 @@ Hence all team members will use **Rebase and merge** option when merging PR of i
 
 Proper branch naming conventions must be used for development related work in team.
 
-**[sprint-name]   -  [team name]  -  [work type]  -  [exact context]**
+**[sprint name]   -  [team name]  -  [work type]  -  [exact context]**
 
 For example:
 
@@ -235,7 +239,7 @@ Every merge to either **develop** or **master** must have the latest commit as *
 - [TourPlan] Don't show reason if empty.** 
 ```
 
-3. Even the hotfix branch must include Release Commit and update the CHANGELOG.md in it accordingly.
+**3.** Even the hotfix branch must include Release Commit and update the CHANGELOG.md in it accordingly.
 ```
 ## [125.2.5] (Hotfix) 19/12/20
 
@@ -274,6 +278,18 @@ On the other hand, **ff merge** would simply merge the feature branch on-to mast
 Sometimes code related or code review type discussions are needed with other members, hence often we add a prefix **WIP** to the title of PR. Such PR should not be merged as the work is still in progress. Once the WIP thing is over, the author of PR must remove the WIP prefix to get it reviewed & merged.
 
 ![](img/015.png)
+
+## CONCLUSION
+
+If we follow above git practices wisely we then would have clean, understandable, meaningful, manageable git history.
+
+### Before
+
+![](img/017.png)
+
+### After
+
+![](img/018.png)
 
 ## FURTHER READING
 
